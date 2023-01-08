@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  bitcoders-nginx:
+    build: .nginx
+    ports:
+      - '80:80'
+    networks:
+      - dev
+
+  bitcoders-next:
+    build: ./
+    ports:
+      - '3000:3000'
+    networks:
+      - dev
+
+networks:
+  dev:
+    driver: bridge
+
+volumes:
+  staticbuild:
