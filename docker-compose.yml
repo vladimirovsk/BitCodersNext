@@ -1,13 +1,6 @@
 version: '3'
 
 services:
-  bitcoders-nginx:
-    build: .nginx
-    ports:
-      - '80:80'
-    networks:
-      - dev
-
   bitcoders-next:
     build: ./
     ports:
