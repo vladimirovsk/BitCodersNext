@@ -8,7 +8,7 @@ export const Button = ({ appearance, children, className, ...props}: ButtonProps
 					[styles.primary]: appearance == 'primary',
 					[styles.ghost]: appearance == 'ghost',
 					})}
-				    {...props}
+				    {...props }
 				>
 					{children}
 				</button>
