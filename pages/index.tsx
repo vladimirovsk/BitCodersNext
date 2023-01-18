@@ -3,9 +3,9 @@ import {Button, Htag} from '../component';
 export default function Home():JSX.Element {
   return (
     <>
-      <Htag tag ='h2' >component htag</Htag>
-        <Button appearance='primary' className="test">Button</Button>
-        <Button appearance='ghost'>Button</Button>
+      <Htag tag ='h2' >component</Htag>
+        <Button appearance='primary' className="test">Login</Button>
+        <Button appearance='ghost'>Help</Button>
     </>
   )
 }
