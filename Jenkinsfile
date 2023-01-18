@@ -23,7 +23,7 @@ pipeline {
                 echo 'Deploying....'
                 catchError {
                 script {
-                    sh "docker-compose up -d"
+                    sh "docker-compose up --build -d"
                 }
             }
             }
