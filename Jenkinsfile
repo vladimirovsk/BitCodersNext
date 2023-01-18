@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 catchError {
                     script {
-                        docker.build("BitCodersNext", "-f Dockerfile .")
+                       sh "docker build ."
                     }
                 }
             }
