@@ -10,7 +10,6 @@ pipeline {
                         docker.build("BitCodersNext", "-f Dockerfile .")
                     }
                 }
-
             }
         }
         stage('Test') {
@@ -22,10 +21,10 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 catchError {
-                script {
-                    sh "docker-compose up --build -d"
+                    script {
+                        sh "docker-compose up --build -d"
+                    }
                 }
-            }
             }
         }
     }
