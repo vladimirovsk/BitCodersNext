@@ -23,7 +23,7 @@ pipeline {
                 echo 'Deploying....'
                 catchError {
                 script {
-                    docker.build("BitCodersNext", "-d docker-compose up ")
+                    sh "docker-compose up -d"
                 }
             }
             }
