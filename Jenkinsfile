@@ -1,15 +1,12 @@
 pipeline {
     agent any
-    when {
-        branch 'master'
-    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
                 catchError {
                     script {
-                       sh "docker build ."
+                        sh "docker build ."
                     }
                 }
             }
