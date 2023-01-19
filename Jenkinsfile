@@ -3,6 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo 'Copy configuration files'
+                sh 'cp /opt/project/BitCodersNext/.env /var/lib/jenkins/workspace/BitCodersNext/.env'
+            }
+            steps {
                 echo 'Building..'
                 catchError {
                     script {
