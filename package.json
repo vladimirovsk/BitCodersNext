@@ -4,29 +4,37 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "start:dev": "npm run dev --watch",
+    "start:dev": "npm run dev --wnatch",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
+    "@types/socket.io-client": "^3.0.0",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.1.2",
     "classnames": "^2.3.2",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "^13.2.4",
+    "next-auth": "^4.20.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "reactstrap": "^9.1.10",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.23.1",
     "eslint-config-next": "12.3.1",
-    "stylelint": "^14.12.1",
-    "stylelint-config-standard": "^28.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-order-config-standard": "^0.1.3",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
     "typescript": "^4.8.3"
   }
 }
