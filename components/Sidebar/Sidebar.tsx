@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { FiSettings } from 'react-icons/fi';
