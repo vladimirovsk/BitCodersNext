@@ -18,7 +18,7 @@ export default NextAuth({
 		// 	// // Allows callback URLs on the same origin
 		// 	// else if (new URL(url).origin === baseUrl) return url
 		// 	baseUrl = process.
-			console.log('baseUrl',baseUrl)
+			console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL, process.env.VERCEL_URL)
 			return baseUrl
 		 },
 		async session({ session, token, user }) {
