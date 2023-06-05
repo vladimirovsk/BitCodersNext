@@ -1,9 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import { useSession } from "next-auth/react";
 import openSocket from "socket.io-client";
-import Header from '../components/Header/Header';
-import Head from 'next/head';
-// import GoogleButton from '../component/GoogleButton/GoogleButton';
 
 type Token = {
     symbol: string,
