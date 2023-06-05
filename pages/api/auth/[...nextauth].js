@@ -14,9 +14,10 @@ export default NextAuth({
 	 // },
 	callbacks: {
 		async redirect({url, baseUrl}){
-			if (url.startsWith("/")) return `${baseUrl}${url}`
-			// Allows callback URLs on the same origin
-			else if (new URL(url).origin === baseUrl) return url
+			// if (url.startsWith("/")) return `${baseUrl}${url}`
+			// // Allows callback URLs on the same origin
+			// else if (new URL(url).origin === baseUrl) return url
+			baseUrl = process.env.NEXTAUTH_URL;
 			console.log('baseUrl',baseUrl)
 			return baseUrl
 		},
