@@ -14,14 +14,14 @@ export default NextAuth({
 		// signIn: '/auth/signin',
 	 // },
 	callbacks: {
-		 async redirect({url, baseUrl}){
+		 //async redirect({url, baseUrl}){
 		// 	// if (url.startsWith("/")) return `${baseUrl}${url}`
 		// 	// // Allows callback URLs on the same origin
 		// 	// else if (new URL(url).origin === baseUrl) return url
 		 	//baseUrl = process.env.NEXTAUTH_URL
-			console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
-			return baseUrl
-		 },
+			//console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
+			//return baseUrl
+		 //},
 		 // session = async ({ session, token, user }) => {
 			// session.user.username = session.user.name
 			// 	.split(' ')
