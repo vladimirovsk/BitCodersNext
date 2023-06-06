@@ -23,7 +23,7 @@ export default NextAuth({
 			//return baseUrl
 		 //},
 		async session ({ session, token, user }) {
-			console.log(process.env.NEXTAUTH_URL, process.env.NEXTAUTH_SECRET)
+			console.log(process.env.NEXTAUTH_URL, process.env.NEXT_PUBLIC_SECRET)
 			// session.user.username = session.user.name
 			// 	.split(' ')
 			// 	.join('')
