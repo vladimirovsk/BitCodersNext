@@ -22,15 +22,16 @@ export default NextAuth({
 			//console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
 			//return baseUrl
 		 //},
-		 // session = async ({ session, token, user }) => {
+		async session ({ session, token, user }) {
+			console.log(process.env.NEXTAUTH_URL, process.env.NEXTAUTH_SECRET)
 			// session.user.username = session.user.name
 			// 	.split(' ')
 			// 	.join('')
 			// 	.toLocaleLowerCase()
 			// session.user.uid = token.sub
-			// return session
+			return session
 		},
-	//}
+	},
 	secret: process.env.NEXT_PUBLIC_SECRET,
 	debug: true,
 })
