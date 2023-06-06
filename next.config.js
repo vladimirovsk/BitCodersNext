@@ -7,7 +7,9 @@ const nextConfig = {
     domains: ['dev.bitcoders.net']
   },
   env: {
-    NEXTAUTH_URL: process.env.NEXTAUTH_URL
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    VERCEL: process.env.NEXTAUTH_URL,
+    VERCEL_URL: process.env.NEXTAUTH_URL
   }
 };
 

@@ -19,7 +19,7 @@ export default NextAuth({
 		// 	// if (url.startsWith("/")) return `${baseUrl}${url}`
 		// 	// // Allows callback URLs on the same origin
 		// 	// else if (new URL(url).origin === baseUrl) return url
-		 	baseUrl = process.env.NEXTAUTH_URL
+		 	//baseUrl = process.env.NEXTAUTH_URL
 			console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
 			return baseUrl
 		 },
