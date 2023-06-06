@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+require('dotenv').config();
+
 
 export default NextAuth({
 	// site: process.env.NEXTAUTH_URL,
