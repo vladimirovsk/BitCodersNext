@@ -1,14 +1,13 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-require('dotenv').config();
 
 
 export default NextAuth({
 	// site: process.env.NEXTAUTH_URL,
 	providers: [
 		GoogleProvider({
-			clientId: process.env.GOOGLE_AUTH_CLIENT_ID,
-			clientSecret: process.env.GOOGLE_AUTH_CLIENT_SECRET,
+			clientId: String(process.env.GOOGLE_AUTH_CLIENT_ID),
+			clientSecret: String(process.env.GOOGLE_AUTH_CLIENT_SECRET),
 		})
 	],
 	 // pages: {
@@ -23,16 +22,15 @@ export default NextAuth({
 			console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
 			return baseUrl
 		 },
-		async session({ session, token, user }) {
-
-			session.user.username = session.user.name
-				.split(' ')
-				.join('')
-				.toLocaleLowerCase()
-			session.user.uid = token.sub
-			return session
+		 // session = async ({ session, token, user }) => {
+			// session.user.username = session.user.name
+			// 	.split(' ')
+			// 	.join('')
+			// 	.toLocaleLowerCase()
+			// session.user.uid = token.sub
+			// return session
 		},
-	},
+	//}
 	secret: process.env.NEXT_PUBLIC_SECRET,
 	debug: true,
 })
