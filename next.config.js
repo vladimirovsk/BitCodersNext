@@ -5,6 +5,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['dev.bitcoders.net']
+  },
+  env: {
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL
   }
 };
 
