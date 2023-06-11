@@ -1,6 +1,5 @@
-import NextAuth from "next-auth";
+import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
-
 
 export default NextAuth({
 	providers: [
@@ -9,22 +8,22 @@ export default NextAuth({
 			clientSecret: String(process.env.GOOGLE_AUTH_CLIENT_SECRET),
 		})
 	],
-	callbacks: {
-		 async redirect({url, baseUrl}){
-			 baseUrl = String(process.env.NEXTAUTH_URL);
-			 console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
-			 return baseUrl
-		 },
-		async session ({ session, token, user }) {
-
-			// session.user.username = session.user.name
-			// 	.split(' ')
-			// 	.join('')
-			// 	.toLocaleLowerCase()
-			// session.user.uid = token.sub
-			return session
-		},
-	},
+	// callbacks: {
+	// 	 async redirect({url, baseUrl}){
+	// 		 // baseUrl = String(process.env.NEXTAUTH_URL);
+	// 		 console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
+	// 		 return baseUrl
+	// 	 },
+	// 	async session ({ session, token, user }) {
+	//
+	// 		// session.user.username = session.user.name
+	// 		// 	.split(' ')
+	// 		// 	.join('')
+	// 		// 	.toLocaleLowerCase()
+	// 		// session.user.uid = token.sub
+	// 		return session
+	// 	},
+	// },
 	secret: process.env.NEXT_PUBLIC_SECRET,
 	debug: true,
 })
