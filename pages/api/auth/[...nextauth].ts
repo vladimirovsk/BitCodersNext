@@ -11,9 +11,9 @@ export default NextAuth({
 	],
 	callbacks: {
 		 async redirect({url, baseUrl}){
-		    console.log(process.env.NEXTAUTH_URL, process.env.NEXT_PUBLIC_SECRET)
-			console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
-			return baseUrl
+			 baseUrl = String(process.env.NEXTAUTH_URL);
+			 console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
+			 return baseUrl
 		 },
 		async session ({ session, token, user }) {
 
