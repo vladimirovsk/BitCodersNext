@@ -15,6 +15,15 @@ export default NextAuth({
 			 console.log('NEXT_PUBLIC_SECRET', process.env.NEXT_PUBLIC_SECRET)
 			 return baseUrl
 		 },
+		async signIn({user, account, profile}) {
+			console.log('signIn')
+			return true
+		},
+		// async redirect(url, baseUrl) { return baseUrl },
+		async session({session, user}) {
+			console.log(session, 'session', user, 'user')
+			return session
+		},
 	// 	async session ({ session, token, user }) {
 	//
 	// 		// session.user.username = session.user.name
