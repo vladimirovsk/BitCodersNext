@@ -8,12 +8,13 @@ export default NextAuth({
 			clientSecret: String(process.env.GOOGLE_AUTH_CLIENT_SECRET),
 		})
 	],
-	// callbacks: {
-	// 	 async redirect({url, baseUrl}){
-	// 		 // baseUrl = String(process.env.NEXTAUTH_URL);
-	// 		 console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
-	// 		 return baseUrl
-	// 	 },
+	callbacks: {
+		 async redirect({url, baseUrl}){
+			 // baseUrl = String(process.env.NEXTAUTH_URL);
+			 console.log('baseUrl', baseUrl, process.env.NEXTAUTH_URL)
+			 console.log('NEXT_PUBLIC_SECRET', process.env.NEXT_PUBLIC_SECRET)
+			 return baseUrl
+		 },
 	// 	async session ({ session, token, user }) {
 	//
 	// 		// session.user.username = session.user.name
@@ -23,7 +24,7 @@ export default NextAuth({
 	// 		// session.user.uid = token.sub
 	// 		return session
 	// 	},
-	// },
-	secret: process.env.NEXT_PUBLIC_SECRET,
+	},
+	secret: process.env.NEXTAUTH_SECRET,
 	debug: true,
 })
