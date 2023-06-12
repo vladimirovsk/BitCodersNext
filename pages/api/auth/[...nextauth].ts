@@ -8,6 +8,9 @@ export default NextAuth({
 			clientSecret: String(process.env.GOOGLE_AUTH_CLIENT_SECRET),
 		})
 	],
+	session: {
+		strategy: "jwt",
+	},
 	callbacks: {
 		 async redirect({url, baseUrl}){
 			 // baseUrl = String(process.env.NEXTAUTH_URL);
@@ -35,5 +38,5 @@ export default NextAuth({
 	// 	},
 	},
 	secret: process.env.NEXTAUTH_SECRET,
-	debug: true,
+	// debug: true,
 })
