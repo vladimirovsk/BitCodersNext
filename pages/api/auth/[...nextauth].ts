@@ -13,7 +13,7 @@ export default NextAuth({
 	},
 	callbacks: {
 		 async redirect({url, baseUrl}){
-			 baseUrl = String(process.env.NEXTAUTH_URL);
+			 // baseUrl = String(process.env.NEXTAUTH_URL);
 			 console.log('baseUrl', url, baseUrl, process.env.NEXTAUTH_URL)
 			 console.log('NEXTAUTH_SECRET', process.env.NEXTAUTH_SECRET)
 			 return baseUrl
