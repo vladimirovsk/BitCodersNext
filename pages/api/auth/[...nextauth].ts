@@ -15,7 +15,7 @@ export default NextAuth({
 		 async redirect({url, baseUrl}){
 			 baseUrl = String(process.env.NEXTAUTH_URL);
 			 console.log('baseUrl', url, baseUrl, process.env.NEXTAUTH_URL)
-			 console.log('NEXT_PUBLIC_SECRET', process.env.NEXT_PUBLIC_SECRET)
+			 console.log('NEXTAUTH_SECRET', process.env.NEXTAUTH_SECRET)
 			 return baseUrl
 		 },
 		async signIn({user, account, profile}) {
