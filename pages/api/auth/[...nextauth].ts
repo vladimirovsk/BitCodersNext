@@ -8,8 +8,11 @@ export default NextAuth({
 			clientSecret: String(process.env.GOOGLE_AUTH_CLIENT_SECRET),
 		})
 	],
-	session: {
-		strategy: "jwt",
+	callbacks: {
+		async jwt({token}) {
+			token.userRole = "admin"
+			return token
+		},
 	},
 	// pages: {
 	// 	signIn: '/auth/signin',
@@ -40,6 +43,7 @@ export default NextAuth({
 	// 		return session
 	// 	},
 	// },
+
 	secret: 'ra16VE3MSBnBhG+TStWRL88nJK2u4bEh54ZRult/P6c=',
 	debug: true,
 })
