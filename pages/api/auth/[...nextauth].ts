@@ -4,13 +4,15 @@ import GoogleProvider from "next-auth/providers/google";
 export default NextAuth({
 	providers: [
 		GoogleProvider({
-			clientId: String(process.env.GOOGLE_AUTH_CLIENT_ID),
-			clientSecret: String(process.env.GOOGLE_AUTH_CLIENT_SECRET),
+			clientId: process.env.GOOGLE_ID as string,
+			clientSecret: process.env.GOOGLE_SECRET as string,
 		})
 	],
 	callbacks: {
 		async jwt({token}) {
-			token.userRole = "admin"
+			console.log('NEXTAUTH_SECRET', process.env.NEXTAUTH_SECRET)
+			console.log('NEXTAUTH_URL', process.env.NEXTAUTH_URL)
+
 			return token
 		},
 	},
@@ -44,6 +46,6 @@ export default NextAuth({
 	// 	},
 	// },
 
-	secret: 'ra16VE3MSBnBhG+TStWRL88nJK2u4bEh54ZRult/P6c=',
+	secret: process.env.NEXTAUTH_SECRET,
 	debug: true,
 })
