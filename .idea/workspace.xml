@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aefbf15-8f9f-4662-bc5c-1c9d1b812bf5" name="Changes" comment="fix google auth" />
+    <list default="true" id="1aefbf15-8f9f-4662-bc5c-1c9d1b812bf5" name="Changes" comment="fix google auth">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +89,7 @@
       <recent name="$PROJECT_DIR$/component/GoogleButton" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.bitcoders-next: Compose Deployment">
+  <component name="RunManager" selected="npm.start">
     <configuration name="Dockerfile builder" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -135,26 +138,23 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.bitcoders-nginx: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="bitcoders-nginx" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Docker.docker-compose.yml.bitcoders-next: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile builder" />
-        <item itemvalue="Docker.docker-compose.yml.bitcoders-nginx: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -539,7 +539,7 @@
       <option name="project" value="LOCAL" />
       <updated>1687060647282</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
