@@ -17,7 +17,7 @@ RUN npm install react-scripts
 
 #ENV NODE_ENV=production
 
-RUN npm run build
+#RUN npm run build
 
 FROM node:18.16.0
 
