@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm install
 
-RUN npm install react-scripts -g
+RUN npm install -g create-react-app
 
 #ENV NODE_ENV=production
 
