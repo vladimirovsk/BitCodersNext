@@ -31,7 +31,7 @@ WORKDIR /usr/src/app
 #COPY --from=builder /usr/src/app/public ./public
 ##COPY --from=builder ["/usr/src/app/next.config.js",  "/usr/src/app/package.json", "./"]
 #COPY --from=builder ["/usr/src/app/package.json", "./"]
-COPY . .
+COPY . ./
 
 EXPOSE 3000
 
