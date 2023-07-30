@@ -1,7 +1,6 @@
 FROM node:18.16.0
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 RUN apt-get update -yqq \
     && apt-get -yqq install nasm
