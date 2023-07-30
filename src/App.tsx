@@ -20,7 +20,7 @@ function App() {
     const credentialResponse = async (credentialResponse:CredentialResponse) =>{
         console.log(credentialResponse);
         const { data } = await axios.post(
-            "http://localhost:9087/api/v1/google-auth/",
+            `${process.env.REACT_APP_API_URL}/google-auth/`,
             {
                 // pass the token as part of the req body
                 token: credentialResponse.credential,

@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aefbf15-8f9f-4662-bc5c-1c9d1b812bf5" name="Changes" comment="fix google auth">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20230730_0000",
+    "com.google.cloudcode.ide_session_index": "20230730_0001",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/s.vladimirov/Project/BitCoders/BitcodersNext",
@@ -537,7 +538,7 @@
       <option name="project" value="LOCAL" />
       <updated>1687060647282</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
