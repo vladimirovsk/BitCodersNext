@@ -9,6 +9,9 @@ function App() {
 
     const logOut = () => {
         googleLogout();
+        googleLogout();
+        localStorage.removeItem("AuthData");
+        window.location.reload();
         setAuthData(null);
     };
 
@@ -56,12 +59,7 @@ function App() {
                   <h1>React x Nestjs Google Sign in</h1>
                   <div className={"container"}>
                       <Button
-                          onClick={() => {
-                              googleLogout();
-                              localStorage.removeItem("AuthData");
-                              setAuthData(null);
-                              window.location.reload();
-                          }}
+                          onClick={() => logOut}
                           className={"button"}
                       >
                           Logout
