@@ -15,10 +15,6 @@ function App() {
         setAuthData(null);
     };
 
-    // useEffect(()=>{
-    //
-    // })
-
 
     const credentialResponse = async (credentialResponse:CredentialResponse) =>{
         console.log(credentialResponse);
@@ -31,11 +27,6 @@ function App() {
         );
         setAuthData(data);
     }
-
-    // const errorMessage = (error: void) => {
-    //     console.log(error);
-    // };
-    //onSuccess={responseMessage} onError={errorMessage}
 
   return (
     <div className="App">
