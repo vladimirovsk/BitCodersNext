@@ -1,33 +1,27 @@
-FROM node:18.16.0 as builder
+FROM node:18.16.0
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 RUN apt-get update -yqq \
     && apt-get -yqq install nasm
 
-COPY . .
+COPY package.json ./
+COPY package-lock.json ./
 
-RUN npm install -q
+RUN npm install
 
-ENV NODE_ENV=production
+RUN npm install -g create-react-app
 
-RUN npm run build
+RUN npm install react-scripts
 
-FROM node:18.16.0
 
-ENV NODE_ENV=production
+#ENV NODE_ENV=production
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+#RUN npm run build
 
-COPY --from=builder /usr/src/app/node_modules ./node_modules
-COPY --from=builder /usr/src/app/.next ./.next
-COPY --from=builder /usr/src/app/public ./public
-#"/usr/src/app/.env",
-COPY --from=builder ["/usr/src/app/next.config.js",  "/usr/src/app/package.json", "./"]
+COPY . ./
 
 EXPOSE 3000
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "start" ]
 
